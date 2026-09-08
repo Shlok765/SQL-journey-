@@ -1,0 +1,52 @@
+-- Day 01: PostgreSQL Basics
+
+-- Create table
+CREATE TABLE students (
+    id INT,
+    name VARCHAR(50),
+    age INT,
+    course VARCHAR(50)
+);
+
+-- Insert data
+INSERT INTO students (id, name, age, course)
+VALUES
+(1, 'Shlok', 20, 'CS'),
+(2, 'Urvi', 20, 'BSC'),
+(3, 'Pradnya', 45, 'Arts');
+
+-- Select all students
+SELECT *
+FROM students;
+
+-- Select specific columns
+SELECT name
+FROM students;
+
+SELECT name, course
+FROM students;
+
+-- WHERE
+SELECT *
+FROM students
+WHERE course = 'Arts';
+
+SELECT *
+FROM students
+WHERE age > 30;
+
+SELECT *
+FROM students
+WHERE age < 30;
+
+-- AND
+SELECT *
+FROM students
+WHERE age > 20
+AND course = 'CS';
+
+-- OR
+SELECT *
+FROM students
+WHERE age < 30
+OR course = 'Arts';
